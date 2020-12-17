@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements IHome.View {
 
     private RecyclerView refgrhtntre;
     private InfoAdapter infoAdapter;
+    private List<Item.ResultsBean>list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,18 +28,14 @@ public class MainActivity extends AppCompatActivity implements IHome.View {
     private void initView() {
         refgrhtntre = (RecyclerView) findViewById(R.id.refgrhtntre);
         refgrhtntre.setLayoutManager(new LinearLayoutManager(this));
-        refgrhtntre = (RecyclerView) findViewById(R.id.recylt);
         refgrhtntre.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<>();
-        adapter = new ResultAdapter(list, this);
-        refgrhtntre.setAdapter(adapter);
+        infoAdapter = new InfoAdapter(list, this);
+        refgrhtntre.setAdapter(infoAdapter);
     }
 
     @Override
     public void getItem(Item item) {
-        private com.example.day_03_class.intergetr.IHome.Personter personter;
-        private RecyclerView recy;
-        private List<com.example.day_03_class.base.Item.ResultsBean> list;
-        private InfoAdapter infoAdapter;
+       
     }
 }
